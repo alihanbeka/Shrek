@@ -9,17 +9,7 @@ public class ProjectileLaunch : MonoBehaviour
     public float shootTime;
     public float shootCounter;
    
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        shootCounter = shootTime;
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    public void Shoot()
     {
         if (Input.GetButtonDown("Fire1") && shootCounter <= 0)
         {
@@ -35,5 +25,21 @@ public class ProjectileLaunch : MonoBehaviour
             }
         }
         shootCounter -= Time.deltaTime;
+
+
+    }
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        shootCounter = shootTime;
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Shoot();
     }
 }

@@ -119,8 +119,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.27, y: 0.26}
+  m_Offset: {x: 0.009189228, y: 0.0075182915}
+  m_Size: {x: 0.1814521, y: 0.16142856}
   m_Direction: 1
 --- !u!50 &3180016672575703533
 Rigidbody2D:
@@ -164,4 +164,3 @@ MonoBehaviour:
   projectileRb: {fileID: 3180016672575703533}
   speed: 6
   projectileLife: 2
-  projectileCount: 0

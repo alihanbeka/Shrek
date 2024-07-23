@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aaa4f2d85f3e65d40a19988e70d713ca
+guid: b2c48c0dde579544889da8c3b515a642
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 30
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shoot-removebg-preview_0
+      name: throw_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 7
+        x: 8
+        y: 6
+        width: 41
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f88e229a28bfd499fda2270c610d3a
+      internalID: -469571995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 6
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7f5a33891b46842881e298fde948a0
+      internalID: 1956029914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_2
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 6
         width: 29
-        height: 39
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 539e05cd2e1945741ac78f1c12db6836
-      internalID: -1108594497
+      spriteID: 8623726a0ffe7e44f89ca2b79652a64c
+      internalID: -1426890750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shoot-removebg-preview_1
+      name: throw_3
       rect:
         serializedVersion: 2
-        x: 39
-        y: 7
-        width: 31
-        height: 39
+        x: 116
+        y: 6
+        width: 29
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,50 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a0959ba81a342b41bfe71c3192ddb66
-      internalID: -395383278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shoot-removebg-preview_2
-      rect:
-        serializedVersion: 2
-        x: 74
-        y: 7
-        width: 30
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72f8d92ef401ef747a2d49b82bcdc6f3
-      internalID: 950398229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shoot-removebg-preview_3
-      rect:
-        serializedVersion: 2
-        x: 109
-        y: 7
-        width: 26
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: daeba0a080e64434b8365bd828baf53a
-      internalID: 70772748
+      spriteID: dad24d8cbcfdaa841a66be229a7e7dc9
+      internalID: -634207274
       vertices: []
       indices: 
       edges: []
@@ -204,11 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      shoot-removebg-preview_0: -1108594497
-      shoot-removebg-preview_1: -395383278
-      shoot-removebg-preview_2: 950398229
-      shoot-removebg-preview_3: 70772748
-      shoot-removebg-preview_4: -1172402884
+      throw_0: -469571995
+      throw_1: 1956029914
+      throw_2: -1426890750
+      throw_3: -634207274
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

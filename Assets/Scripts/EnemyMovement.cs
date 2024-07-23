@@ -12,7 +12,12 @@ public class EnemyMovement : MonoBehaviour
     public PlayerHealth health;
     public bool isChasing;
     public float chaseDistance;
- 
+    private Animator _animator;
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
     public void Chasing()
     {
        

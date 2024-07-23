@@ -38,10 +38,15 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Weak Point")
+        {
+            Debug.Log("collided with enemy");
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+
         // Çarpýþan objeyi yok et
-        Destroy(collision.gameObject);
 
         // Mermiyi yok et
-        Destroy(gameObject);
     }
 }
