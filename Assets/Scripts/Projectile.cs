@@ -4,49 +4,26 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public Rigidbody2D projectileRb;
-    public float speed;
-    public float projectileLife;
-    private float projectileCount;
-    private GameObject player;
+    public int damage = 10; // Projectile'ýn vereceði hasar
+    public float speed = 5f; // Projectile'ýn hýzý
+    public LayerMask enemyLayer; // Düþmanlarýn bulunduðu layer
 
-    // Start is called before the first frame update
-    void Start()
+    private Rigidbody2D rb;
+
+    private void Awake()
     {
-        projectileCount = projectileLife;
-        player = FindObjectOfType<PlayerCollisionController>().gameObject;
+        rb = GetComponent<Rigidbody2D>();
+    }
 
-        if (player.transform.rotation.y == 0)
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if ((other.gameObject.tag == "Weak Point"))
         {
-            projectileRb.velocity = new Vector2(speed, 0);
+            other.gameObject.GetComponent<EnemyMovement>().TakeDamage(damage);
+            Destroy(this.gameObject);
         }
         else
-        {
-            projectileRb.velocity = new Vector2(-speed, 0);
-        }
-    }
+            Destroy(gameObject, 2);
 
-    // Update is called once per frame
-    void Update()
-    {
-        projectileCount -= Time.deltaTime;
-        if (projectileCount <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Weak Point")
-        {
-            Debug.Log("collided with enemy");
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
-
-        // Çarpýþan objeyi yok et
-
-        // Mermiyi yok et
     }
 }
