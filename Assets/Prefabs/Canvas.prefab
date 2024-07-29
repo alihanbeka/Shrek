@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Inventory: {fileID: 6667864696319966136}
+  slotManager: {fileID: 0}
 --- !u!1001 &1672877560119545038
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -105,9 +105,9 @@ public class ShrekMovement : MonoBehaviour
 
     IEnumerator SpawnProjectile(Vector2 direction, Vector3 launchPoint)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         GameObject projectile = Instantiate(projectilePrefab, launchPoint, Quaternion.identity);
-        projectile.GetComponent<Rigidbody2D>().velocity = direction * 10f; // 10f hýzý ayarlayabilirsiniz
+        projectile.GetComponent<Rigidbody2D>().velocity = direction * 12f; 
 
 
     }
@@ -115,7 +115,7 @@ public class ShrekMovement : MonoBehaviour
     private IEnumerator StopShootingAnimation()
     {
         // Fýrlatma animasyonunun süresi kadar bekle
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0f);
         _animator.SetBool("isShooting", false);
     }
 

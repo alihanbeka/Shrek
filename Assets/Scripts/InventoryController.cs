@@ -7,11 +7,7 @@ public class InventoryController : MonoBehaviour
     public GameObject Inventory;
     public SlotManager slotManager;
 
-    Inventory inventory;
-    private void Start()
-    {
-        inventory = PlayerCollisionController.instance._inventory;
-    }
+  
     void Update()
 
     {
@@ -26,7 +22,7 @@ public class InventoryController : MonoBehaviour
             else
             {
                 Inventory.SetActive(true);
-                slotManager.RefreshSlots(inventory.items);
+                slotManager.RefreshSlots(PlayerCollisionController.instance._inventory.items);
                 
             }
         }

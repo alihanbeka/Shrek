@@ -20,15 +20,19 @@ public class InventorySlots : MonoBehaviour
         switch (type)
         {
             case ItemType.heal:
+                icon.gameObject.SetActive(true);
                 icon.sprite = GameManager.instance.gameAssets.HealSprt;
                 break;
             case ItemType.pizza:
+                icon.gameObject.SetActive(true);
                 icon.sprite = GameManager.instance.gameAssets.pizzaSprt;
                 break;
             case ItemType.onion:
+                icon.gameObject.SetActive(true);
                 icon.sprite = GameManager.instance.gameAssets.onionSprt;
                 break;
             default:
+                icon.gameObject.SetActive(false);
                 icon.sprite = null;
                 break;
         }
@@ -36,6 +40,7 @@ public class InventorySlots : MonoBehaviour
 
     public void ClearSlot()
     {
+        icon.gameObject.SetActive(false);
         icon.sprite = null;
         amountText.text = "";
           

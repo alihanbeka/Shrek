@@ -10,7 +10,7 @@ public class EnemyMovement : MonoBehaviour
     public Transform playerTransform;
     public float chaseDistance;
     public int maxHealth = 100; // Düþmanýn maksimum caný
-    private int currentHealth; // Düþmanýn mevcut caný
+    public int currentHealth; // Düþmanýn mevcut caný
     private Animator _animator;
     public bool isChasing;
     public float Force;
@@ -23,7 +23,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage; // Hasarý mevcut candan düþ
+        currentHealth -= damage; 
         Debug.Log("Enemy took damage. Current health: " + currentHealth);
         TakenDamage();
         if (currentHealth <= 0)

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Inventory 
@@ -43,7 +44,7 @@ public class Inventory
                 if (item.amount >= 0)
                 {
                     item.amount -= 1;
-
+                    
                     // Eğer miktar 0 veya daha az olduysa, envanterden kaldır
                     if (item.amount <= 0)
                     {
