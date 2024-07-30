@@ -10,6 +10,8 @@ public class GameAssets: MonoBehaviour
     public Sprite HealSprt;
     [SerializeField]
     public Sprite pizzaSprt;
+    [SerializeField]
+    public Sprite cookieSprt;
 
 
 }

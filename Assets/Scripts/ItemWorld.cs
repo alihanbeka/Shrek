@@ -38,6 +38,9 @@ public class ItemWorld : MonoBehaviour
             case ItemType.onion:
                 spriteRenderer.sprite = GameManager.instance.gameAssets.onionSprt;
                 break;
+            case ItemType.cookie:
+                spriteRenderer.sprite = GameManager.instance.gameAssets.cookieSprt;
+                break;
             default:
                 break;
         }

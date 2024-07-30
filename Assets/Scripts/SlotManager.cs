@@ -26,13 +26,16 @@ public class SlotManager : MonoBehaviour
         {
             slot.ClearSlot();
         }
-        if (inventoryList[0] != null)
+        if (inventoryList.Count > 0 && inventoryList[0] != null)
             Debug.Log("inventory list" + inventoryList[0].type);
         // Ardýndan envanterdeki öðeleri slotlara yerleþtir
         for (int i = 0; i < inventoryList.Count; i++)
         {
-           
+
             slots[i].SetItem(inventoryList[i]);
+            inventoryList[i].slotId = i;
+            Debug.Log("slot id setted: " + i);
         }
     }
+
 }

@@ -41,12 +41,12 @@ public class Inventory
             Item item = items[i];
             if (item.type == itemType)
             {
-                if (item.amount >= 0)
+                if (item.amount > 0)
                 {
                     item.amount -= 1;
                     
                     // Eğer miktar 0 veya daha az olduysa, envanterden kaldır
-                    if (item.amount <= 0)
+                    if (item.amount == 0)
                     {
                         items.RemoveAt(i);
                     }

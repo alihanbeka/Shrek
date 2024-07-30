@@ -6,7 +6,7 @@ public class InventorySlots : MonoBehaviour
 {
     public Image icon;
     public TextMeshProUGUI amountText;
-
+    public int id;
 
     public void SetItem(Item item)
     {
@@ -43,14 +43,33 @@ public class InventorySlots : MonoBehaviour
         icon.gameObject.SetActive(false);
         icon.sprite = null;
         amountText.text = "";
-          
-    }
-    public void RemoveSlot(int id)
-    { 
-        Item item = PlayerCollisionController.instance._inventory.items[id];
-        PlayerCollisionController.instance._inventory.RemoveItem(item.type);
-        if(!PlayerCollisionController.instance._inventory.items.Exists(r => r.type == item.type))
-            ClearSlot();
 
     }
+    public void RemoveSlot(int id)
+    {
+        Item item = new Item();
+        item = PlayerCollisionController.instance._inventory.items[id];
+        if (item == null)
+        {
+            for (int i = 0; i < id; i++)
+            {
+                item = PlayerCollisionController.instance._inventory.items[id];
+                if (item != null)
+                    break;
+                else
+                    id--;
+            }
+        }
+
+        if (item == null)
+            item = PlayerCollisionController.instance._inventory.items[id - 1];
+
+        PlayerCollisionController.instance._inventory.RemoveItem(item.type);
+        if (!PlayerCollisionController.instance._inventory.items.Exists(r => r.type == item.type))
+            ClearSlot();
+        SlotManager.Instance.RefreshSlots(PlayerCollisionController.instance._inventory.items);
+
+
+    }
+
 }

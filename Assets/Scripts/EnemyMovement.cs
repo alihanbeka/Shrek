@@ -47,7 +47,7 @@ public class EnemyMovement : MonoBehaviour
         // Ölme animasyonunu baþlat
         _animator.SetTrigger("Die");
         // Düþmaný yok et
-        Destroy(gameObject, 0.5f); // Yarým saniye sonra düþmaný yok et
+        Destroy(gameObject); // Yarým saniye sonra düþmaný yok et
     }
 
     public void Chasing()
